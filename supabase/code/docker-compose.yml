@@ -294,6 +294,13 @@ services:
       SUPABASE_DB_URL: postgresql://postgres:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
       # TODO: Allow configuring VERIFY_JWT per function. This PR might help: https://github.com/supabase/cli/pull/786
       VERIFY_JWT: "${FUNCTIONS_VERIFY_JWT}"
+      AGENT_API_KEY: ${AGENT_API_KEY}
+      CREDENTIALS_MASTER_KEY: ${CREDENTIALS_MASTER_KEY}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-flash}
+      OPENCODE_API_KEY: ${OPENCODE_API_KEY}
+      OPENCODE_BASE_URL: ${OPENCODE_BASE_URL:-https://opencode.ai/zen/go/v1}
+      APP_BASE_URL: ${APP_BASE_URL:-}
     command: [ "start", "--main-service", "/home/deno/functions/main" ]
 
   analytics:
