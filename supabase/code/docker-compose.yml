@@ -301,6 +301,9 @@ services:
       OPENCODE_API_KEY: ${OPENCODE_API_KEY}
       OPENCODE_BASE_URL: ${OPENCODE_BASE_URL:-https://opencode.ai/zen/go/v1}
       APP_BASE_URL: ${APP_BASE_URL:-}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      GOOGLE_OAUTH_REDIRECT_URI: ${GOOGLE_OAUTH_REDIRECT_URI:-}
     command: [ "start", "--main-service", "/home/deno/functions/main" ]
 
   analytics:
